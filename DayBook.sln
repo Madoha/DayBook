@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BC02C63B-D02E-4BAA-B90F-5573A56F3805}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{54AFAC0F-54EF-4B91-96CE-D93593814842}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3E487F27-116F-44B4-BB00-2ACE70C36279}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayBook.Api", "DayBook.Api\DayBook.Api.csproj", "{96CA6124-720B-415C-86D4-D5996F385243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayBook.Domain", "DayBook.Domain\DayBook.Domain.csproj", "{ED3445ED-C606-4061-9362-E1AF72F88442}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayBook.DAL", "DayBook.DAL\DayBook.DAL.csproj", "{E0F2793E-3AC5-41C8-9885-F11650E57640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayBook.Application", "DayBook.Application\DayBook.Application.csproj", "{B28E4F80-F867-480D-9842-ADDA76499F8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96CA6124-720B-415C-86D4-D5996F385243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CA6124-720B-415C-86D4-D5996F385243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CA6124-720B-415C-86D4-D5996F385243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CA6124-720B-415C-86D4-D5996F385243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED3445ED-C606-4061-9362-E1AF72F88442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED3445ED-C606-4061-9362-E1AF72F88442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED3445ED-C606-4061-9362-E1AF72F88442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED3445ED-C606-4061-9362-E1AF72F88442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F2793E-3AC5-41C8-9885-F11650E57640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F2793E-3AC5-41C8-9885-F11650E57640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F2793E-3AC5-41C8-9885-F11650E57640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F2793E-3AC5-41C8-9885-F11650E57640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28E4F80-F867-480D-9842-ADDA76499F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28E4F80-F867-480D-9842-ADDA76499F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28E4F80-F867-480D-9842-ADDA76499F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28E4F80-F867-480D-9842-ADDA76499F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96CA6124-720B-415C-86D4-D5996F385243} = {54AFAC0F-54EF-4B91-96CE-D93593814842}
+		{ED3445ED-C606-4061-9362-E1AF72F88442} = {BC02C63B-D02E-4BAA-B90F-5573A56F3805}
+		{E0F2793E-3AC5-41C8-9885-F11650E57640} = {3E487F27-116F-44B4-BB00-2ACE70C36279}
+		{B28E4F80-F867-480D-9842-ADDA76499F8F} = {BC02C63B-D02E-4BAA-B90F-5573A56F3805}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D64E0266-9F9D-4CDE-B96A-B19905DD6398}
+	EndGlobalSection
+EndGlobal

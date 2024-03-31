@@ -1,0 +1,6 @@
+@DayBook.Api_HostAddress = http://localhost:5085
+
+GET {{DayBook.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
