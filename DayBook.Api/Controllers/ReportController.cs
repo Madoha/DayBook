@@ -1,11 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DayBook.Domain.Dto.Report;
+using DayBook.Domain.Interfaces.Services;
+using DayBook.Domain.Result;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DayBook.Api.Controllers;
 
+//[Authorize]
+[ApiController]
+[Route("api/v1/[controller]")]
 public class ReportController : ControllerBase
 {
-    public IActionResult Index()
+    private readonly IReportService _reportService;
+    public ReportController(IReportService reportService)
     {
-        throw new NotImplementedException();
+        _reportService = reportService;
+    }
+
+    [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<BaseResult<ReportDto>>> GetReport(long id)
+    {
+        var response = await _reportService.GetReportByIdAsync(id);
+
+        if(response.IsSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response);
     }
 }
