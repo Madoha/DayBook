@@ -114,9 +114,10 @@ public class ReportService : IReportService
         ReportDto? report;
         try
         {
-            report = await _reportRepository.GetAll()
+            report = _reportRepository.GetAll()
+                .AsEnumerable()
                 .Select(r => new ReportDto(r.Id, r.Name, r.Description, r.CreatedAt.ToLongDateString()))
-                .FirstOrDefaultAsync(r => r.Id == id);
+                .FirstOrDefault(r => r.Id == id);
         }
         catch (Exception ex)
         {
@@ -130,7 +131,7 @@ public class ReportService : IReportService
 
         if (report == null)
         {
-            _logger.Warning("Report with {Id} not found", id);
+            _logger.Warning($"Report with {id} not found", id);
             return new BaseResult<ReportDto>()
             {
                 ErrorMessage = ErrorMessage.ReportNotFound,
