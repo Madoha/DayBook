@@ -54,7 +54,7 @@ public class ReportService : IReportService
             {
                 Name = dto.Name,
                 Description = dto.Description,
-                UserId = dto.UserId,
+                UserId = dto.UserId
             };
 
             await _reportRepository.CreateAsync(report);
