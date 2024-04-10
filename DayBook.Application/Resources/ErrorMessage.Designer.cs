@@ -70,6 +70,24 @@ namespace DayBook.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password is incorrect.
+        /// </summary>
+        internal static string PasswordIsIncorrect {
+            get {
+                return ResourceManager.GetString("PasswordIsIncorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password is not equal to password confirmation.
+        /// </summary>
+        internal static string PasswordNotEqualPasswordConfirm {
+            get {
+                return ResourceManager.GetString("PasswordNotEqualPasswordConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Report already exists.
         /// </summary>
         internal static string ReportAlreadyExists {
@@ -93,6 +111,15 @@ namespace DayBook.Application.Resources {
         internal static string ReportsNotFound {
             get {
                 return ResourceManager.GetString("ReportsNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User already exists.
+        /// </summary>
+        internal static string UserAlreadyExists {
+            get {
+                return ResourceManager.GetString("UserAlreadyExists", resourceCulture);
             }
         }
         
