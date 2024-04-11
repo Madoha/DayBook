@@ -70,6 +70,24 @@ namespace DayBook.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid client request.
+        /// </summary>
+        internal static string InvalidClientRequest {
+            get {
+                return ResourceManager.GetString("InvalidClientRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid token.
+        /// </summary>
+        internal static string InvalidToken {
+            get {
+                return ResourceManager.GetString("InvalidToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password is incorrect.
         /// </summary>
         internal static string PasswordIsIncorrect {

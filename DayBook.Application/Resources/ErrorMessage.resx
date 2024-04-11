@@ -121,6 +121,14 @@
     <value>Internal server error</value>
     <comment>Внутреняя ошибка сервера</comment>
   </data>
+  <data name="InvalidClientRequest" xml:space="preserve">
+    <value>Invalid client request</value>
+    <comment>Невалидный запрос клиента</comment>
+  </data>
+  <data name="InvalidToken" xml:space="preserve">
+    <value>Invalid token</value>
+    <comment>Невалидный токен</comment>
+  </data>
   <data name="PasswordIsIncorrect" xml:space="preserve">
     <value>Password is incorrect</value>
     <comment>Пароль неверен</comment>
