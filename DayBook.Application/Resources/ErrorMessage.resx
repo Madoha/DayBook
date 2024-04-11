@@ -118,23 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="InternalServerError" xml:space="preserve">
-    <value>Внутреняя ошибка сервера</value>
-    <comment>Internal server error</comment>
+    <value>Internal server error</value>
+    <comment>Внутреняя ошибка сервера</comment>
+  </data>
+  <data name="InvalidClientRequest" xml:space="preserve">
+    <value>Invalid client request</value>
+    <comment>Невалидный запрос клиента</comment>
+  </data>
+  <data name="InvalidToken" xml:space="preserve">
+    <value>Invalid token</value>
+    <comment>Невалидный токен</comment>
+  </data>
+  <data name="PasswordIsIncorrect" xml:space="preserve">
+    <value>Password is incorrect</value>
+    <comment>Пароль неверен</comment>
+  </data>
+  <data name="PasswordNotEqualPasswordConfirm" xml:space="preserve">
+    <value>Password is not equal to password confirmation</value>
+    <comment>Пароли не равны</comment>
   </data>
   <data name="ReportAlreadyExists" xml:space="preserve">
-    <value>Отчет с таким названием уже есть</value>
-    <comment>Report already exists</comment>
+    <value>Report already exists</value>
+    <comment>Отчет с таким названием уже есть</comment>
   </data>
   <data name="ReportNotFound" xml:space="preserve">
-    <value>Отчет не найдены</value>
-    <comment>Report not found</comment>
+    <value>Report not found</value>
+    <comment>Отчет не найдены</comment>
   </data>
   <data name="ReportsNotFound" xml:space="preserve">
-    <value>Отчеты не найдены</value>
-    <comment>Reports not found</comment>
+    <value>Reports not found</value>
+    <comment>Отчеты не найдены</comment>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>User already exists</value>
+    <comment>Пользователь с такими данными уже существует</comment>
   </data>
   <data name="UserNotFound" xml:space="preserve">
-    <value>Пользователь не найден</value>
-    <comment>User not found</comment>
+    <value>User not found</value>
+    <comment>Пользователь не найден</comment>
   </data>
 </root>
