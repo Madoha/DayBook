@@ -34,9 +34,10 @@ JWT аутентификация и авторизация,
 
 Установка
 
-Клонируйте репозиторий: git clone https://github.com/your/repository.git
-Установите зависимости
+Клонируйте репозиторий: git clone https://github.com/your/repository.git.
+Установите зависимости.
 Настройте базу данных PostgreSQL и RabbitMQ.
-Примените миграции: dotnet ef database update
-Запустите проект: dotnet run
-Ссылка: https://localhost:{port}/index.html или просто https://localhost:{port}
+Поднимите контейнер с образом RabbitMq.
+Примените миграции: dotnet ef database update.
+Запустите проект: dotnet run.
+Ссылка: https://localhost:{port}/index.html или просто https://localhost:{port}.
