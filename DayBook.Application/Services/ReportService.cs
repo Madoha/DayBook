@@ -7,7 +7,10 @@ using DayBook.Domain.Interfaces.Repositories;
 using DayBook.Domain.Interfaces.Services;
 using DayBook.Domain.Interfaces.Validations;
 using DayBook.Domain.Result;
+using DayBook.Domain.Settings;
+using DayBook.Producer.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Serilog;
 
 namespace DayBook.Application.Services;
@@ -19,17 +22,23 @@ public class ReportService : IReportService
     private readonly ILogger _logger;
     private readonly IReportValidator _reportValidator;
     private readonly IMapper _mapper;
+    private readonly IMessageProducer _messageProducer;
+    private readonly IOptions<RabbitMqSettings> _rabbitMqOptions;
     public ReportService(IBaseRepository<Report> reportRepository, 
         ILogger logger,
         IBaseRepository<User> userRepository,
         IReportValidator reportValidator,
-        IMapper mapper)
+        IMapper mapper,
+        IMessageProducer messageProducer,
+        IOptions<RabbitMqSettings> rabbitMqOptions)
     {
         _reportRepository = reportRepository;
         _logger = logger;
         _userRepository = userRepository;
         _reportValidator = reportValidator;
         _mapper = mapper;
+        _messageProducer = messageProducer;
+        _rabbitMqOptions = rabbitMqOptions;
     }
 
     /// <inheritdoc/>
@@ -57,6 +66,8 @@ public class ReportService : IReportService
 
         await _reportRepository.CreateAsync(report);
         await _reportRepository.SaveChangesAsync();
+
+        _messageProducer.SendMessage(report, _rabbitMqOptions.Value.RoutingKey, _rabbitMqOptions.Value.ExchangeName);
         return new BaseResult<ReportDto>()
         {
             Data = _mapper.Map<ReportDto>(report),

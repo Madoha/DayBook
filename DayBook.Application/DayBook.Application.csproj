@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DayBook.Domain\DayBook.Domain.csproj" />
+    <ProjectReference Include="..\DayBook.Producer\DayBook.Producer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,6 @@
 ﻿using DayBook.DAL.DependencyInjection;
 using DayBook.Application.DependencyInjection;
 using Serilog;
-using DayBook.Api;
 using DayBook.Domain.Settings;
 using DayBook.Api.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -12,11 +11,14 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using DayBook.DAL;
 using Microsoft.EntityFrameworkCore;
+using DayBook.Producer.DependencyInjection;
+using DayBook.Consumer.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection(JwtSettings.DefaultSection)); // class JwtSettings будет заполнться данными их секции JWT
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection(nameof(RabbitMqSettings)));
 
 builder.Services.AddControllers();
 
@@ -127,6 +129,8 @@ builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Confi
 
 builder.Services.AddDataAccessLayer(configuration);
 builder.Services.AddApplication();
+builder.Services.AddProducer();
+builder.Services.AddConsumer();
 
 var app = builder.Build();
 

@@ -24,8 +24,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DayBook.Application\DayBook.Application.csproj" />
+    <ProjectReference Include="..\DayBook.Consumer\DayBook.Consumer.csproj" />
     <ProjectReference Include="..\DayBook.DAL\DayBook.DAL.csproj" />
     <ProjectReference Include="..\DayBook.Domain\DayBook.Domain.csproj" />
+    <ProjectReference Include="..\DayBook.Producer\DayBook.Producer.csproj" />
   </ItemGroup>
 
 </Project>

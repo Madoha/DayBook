@@ -11,6 +11,7 @@ using System.Net.Mime;
 namespace DayBook.Api.Controllers;
 
 [Route("api/[controller]")]
+//[Authorize(Roles = "Admin")]
 [ApiController]
 [Consumes(MediaTypeNames.Application.Json)]
 public class RoleController : ControllerBase
