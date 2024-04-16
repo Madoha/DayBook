@@ -21,12 +21,11 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         }
 
         await _dbContext.AddAsync(entity);
-        await _dbContext.SaveChangesAsync();
 
         return entity;
     }
 
-    public async Task<TEntity> UpdateAsync(TEntity entity)
+    public TEntity Update(TEntity entity)
     {
         if (entity == null) 
         {
@@ -34,12 +33,11 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         }
         
         _dbContext.Update(entity);
-        await _dbContext.SaveChangesAsync();
 
         return entity;
     }
 
-    public async Task<TEntity> RemoveAsync(TEntity entity)
+    public void Remove(TEntity entity)
     {
         if (entity == null)
         {
@@ -47,9 +45,10 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         }
         
         _dbContext.Remove(entity);
-        await _dbContext.SaveChangesAsync();
-
-        return entity;
     }
 
+    public async Task<int> SaveChangesAsync()
+    {
+        return await _dbContext.SaveChangesAsync();
+    }
 }

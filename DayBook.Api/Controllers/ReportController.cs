@@ -78,11 +78,11 @@ public class ReportController : ControllerBase
     }
 
     /// <summary>
-    /// Receiving user reports
+    /// Deleting a report by id
     /// </summary>
     /// <param name="id"></param>
     /// <remarks>
-    /// <h3>Report to delete a request:</h3>
+    /// <h3>Request to delete a report:</h3>
     /// 
     ///     DELETE
     ///     {
