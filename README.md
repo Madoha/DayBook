@@ -9,6 +9,8 @@ DayBook ежедневник
 .NET 8
 PostgreSQL,
 RabbitMQ,
+AutoMapper,
+Serilog
 Docker (для RabbitMQ),
 Swagger,
 JWT аутентификация и авторизация,
