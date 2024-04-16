@@ -39,3 +39,4 @@ JWT аутентификация и авторизация,
 Настройте базу данных PostgreSQL и RabbitMQ.
 Примените миграции: dotnet ef database update
 Запустите проект: dotnet run
+Ссылка: https://localhost:{port}/index.html или просто https://localhost:{port}
