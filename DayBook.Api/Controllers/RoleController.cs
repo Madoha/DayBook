@@ -10,7 +10,8 @@ using System.Net.Mime;
 
 namespace DayBook.Api.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/{version:apiVersion}/[controller]")]
+[ApiVersion("1.0")]
 //[Authorize(Roles = "Admin")]
 [ApiController]
 [Consumes(MediaTypeNames.Application.Json)]
