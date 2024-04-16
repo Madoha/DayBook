@@ -40,11 +40,3 @@ JWT аутентификация и авторизация
 Настройте базу данных PostgreSQL и RabbitMQ.
 Примените миграции: dotnet ef database update
 Запустите проект: dotnet run
-
-Использование API
-
-Регистрация пользователя: POST /api/auth/register
-Получение токена доступа: POST /api/auth/login
-Обновление токена: POST /api/auth/refresh
-Примеры
-Приведите примеры запросов и ответов API.
