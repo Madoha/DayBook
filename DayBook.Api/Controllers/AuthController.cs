@@ -1,4 +1,5 @@
-﻿using DayBook.Domain.Dto;
+﻿using Asp.Versioning;
+using DayBook.Domain.Dto;
 using DayBook.Domain.Dto.User;
 using DayBook.Domain.Interfaces.Services;
 using DayBook.Domain.Result;
@@ -7,7 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DayBook.Api.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/{version:apiVersion}/[controller]")]
+[ApiVersion("1.0")]
 [ApiController]
 public class AuthController : ControllerBase
 {
